@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test
 class MyProducerTests {
 
     @Test
-    fun `test can say hi`() {
+    fun `MyProducer can say hi`() {
         assert("Im MyProducer" == MyProducer().hi())
     }
 

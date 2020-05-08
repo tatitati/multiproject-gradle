@@ -1,4 +1,4 @@
-package com.example.demo
+package com.consumer
 
 class MyConsumer {
     fun hi(): String {

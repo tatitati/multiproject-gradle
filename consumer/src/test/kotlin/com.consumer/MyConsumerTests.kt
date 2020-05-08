@@ -1,11 +1,11 @@
-package com.example.demo
+package com.consumer
 
 import org.junit.jupiter.api.Test
 
 class MyConsumerTests {
 
     @Test
-    fun `test can say hi`() {
+    fun `MyConcumser can say hi`() {
         assert("Im MyConsumer" == MyConsumer().hi())
     }
 }
