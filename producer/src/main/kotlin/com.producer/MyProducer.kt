@@ -1,4 +1,4 @@
-package com.example.demo
+package com.producer
 
 class MyProducer {
     fun hi(): String {
