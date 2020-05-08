@@ -8,16 +8,27 @@ plugins {
     id("com.adarshr.test-logger") version "2.0.0"
 }
 
-
-group = "com.example"
-version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_1_8
 
-repositories {
-    mavenCentral()
+allprojects {
+    group = "com.example"
+    version = "0.0.1-SNAPSHOT"
+
+    repositories {
+        mavenCentral()
+    }
+
+    tasks.withType<Test> {
+        useJUnitPlatform()
+    }
+
+    tasks.withType<KotlinCompile> {
+        kotlinOptions {
+            freeCompilerArgs = listOf("-Xjsr305=strict")
+            jvmTarget = "1.8"
+        }
+    }
 }
-
-
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
@@ -27,15 +38,4 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
     }
-}
-
-tasks.withType<Test> {
-	useJUnitPlatform()
-}
-
-tasks.withType<KotlinCompile> {
-	kotlinOptions {
-		freeCompilerArgs = listOf("-Xjsr305=strict")
-		jvmTarget = "1.8"
-	}
 }
