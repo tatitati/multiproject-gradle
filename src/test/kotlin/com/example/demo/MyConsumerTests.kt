@@ -8,5 +8,4 @@ class MyConsumerTests {
     fun `test can say hi`() {
         assert("Im MyConsumer" == MyConsumer().hi())
     }
-
 }
