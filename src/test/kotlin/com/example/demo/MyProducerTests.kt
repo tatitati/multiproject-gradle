@@ -6,7 +6,7 @@ class MyProducerTests {
 
     @Test
     fun `test can say hi`() {
-        assert("Im Producer" == MyProducer().hi())
+        assert("Im MyProducer" == MyProducer().hi())
     }
 
 }

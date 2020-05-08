@@ -6,7 +6,7 @@ class MyConsumerTests {
 
     @Test
     fun `test can say hi`() {
-        assert("Im Consumer" == MyConsumer().hi())
+        assert("Im MyConsumer" == MyConsumer().hi())
     }
 
 }
