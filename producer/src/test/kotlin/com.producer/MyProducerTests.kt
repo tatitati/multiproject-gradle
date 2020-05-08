@@ -1,11 +1,11 @@
-package com.example.demo
+package com.producer
 
 import org.junit.jupiter.api.Test
 
 class MyProducerTests {
 
     @Test
-    fun `MyProducer can say hi`() {
+    fun `In subproject MyProducer can say hi`() {
         assert("Im MyProducer" == MyProducer().hi())
     }
 
